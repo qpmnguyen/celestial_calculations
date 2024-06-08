@@ -1,0 +1,5 @@
+[deps]
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+PlutoHooks = "0ff47ea0-7a50-410d-8455-4348d5de0774"
+PlutoLinks = "0ff47ea0-7a50-410d-8455-4348d5de0420"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
