@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ObserverLocation>
+  <Revision>2.0</Revision>
+  <Date>2016-06-14 10:18:00</Date>
+  <Description>
+    This optional file contains the default observer location and time zone.
+  </Description>
+  <Comments></Comments>
+  <DataFormatDescrip>
+    The data must be in the sequence given here (lat,lon,time zone).
+    Latitude/longitude can be entered in either decimal or DMS format.
+    If the lat/lon direction is omitted, a positive value (i.e., N, E) is
+    assumed. The time zone can be PST, MST, CST, EST, or LON. The value LON
+    indicates that when a time zone adjustment is needed, it should be made
+    based upon the observer's longitude.
+  </DataFormatDescrip>
+  <Data>
+    <Latitude>38.25N</Latitude>
+    <Longitude>78d25m15sW</Longitude>
+    <TimeZone>EST</TimeZone>
+  </Data>
+</ObserverLocation>

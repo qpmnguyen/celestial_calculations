@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OrbitalElements>
+  <Revision>2.0</Revision>
+  <Date>2016-06-14 17:14:01</Date>
+  <Description>
+    This file contains the orbital elements for the Sun, Moon, Earth, and planets. Other objects
+    (e.g., asteroids) can be included as well. The orbital elements for the Sun, Moon, and Earth
+    are required in every orbital elements data file, but all other objects are optional.
+  </Description>
+  <Comments>
+    The orbital elements in this data file were taken from multiple sources to get the data required
+    for J2000. Multiple source were required because no single source provides all of the data in
+    one place. The visual magnitudes, excepting the Moon, are taken from JPL sources
+    and are apparent magnitudes at 1 AU from the Earth rather than absolute magnitudes. The visual
+    magnitude for the Moon is at Full Moon as seen from Earth.
+    For all other data, the resources used, in priority order, are:
+    1. http://ssd.jpl.nasa.gov/txt/p_elem_t1.txt - orbital elements for the planets. This JPL/NASA
+    data is valid for the years 1800 AD - 2050 AD, but adjustments must be made to obtain
+    orbital elements for times other than J2000.
+    2. http://ssd.jpl.nasa.gov/?planet_phys_par - physical data for the planets
+    3. The Astronomical Almanac: 2000 - orbital elements for the Sun and Moon. The almanac data was adjusted
+    to J2000.0 (1/1.5/2000) from 1/0.0/2000. For example, the equation in the almanac
+    for the Sun's eccentricity is 0.01670832-0.0000000012*d where d is the difference between
+    the JD for 1/0.0/2000 and 1/1.5/2000. Thus, d = 1.5, giving an eccentricity of 0.0167083182.
+    4. http://nssdc.gsfc.nasa.gov/planetary/planetfact.html - NASA fact sheets for data not give in
+    the above resources.
+  </Comments>
+  <DataFormatDescrip>
+    The Epoch must be entered as both a year and as a Julian Day number in exactly
+    the order shown prior to the Data section. The order in which the objects
+    are listed in the Data section is unimportant, but it is recommended that
+    the order shown here be followed. The sub-elements within an object
+    are the orbital elements for that object and **must** be in the order shown. If
+    a particular orbital element is meaningless for an object, it is documented below
+    with the value NA. The tag must be included whether the element is meaningful or not.
+    For more information on the orbital elements, refer to the orbital elements tables
+    in the chapters on the Sun, Moon, and planets.
+
+    The orbital elements, the order in which they **must** appear, and their units are as follows:
+    name: name by which the object is to be known
+    inferior: true if this object has an orbit between the Earth and Sun, else False (NA for Sun, Moon, and Earth)
+    period: in tropical years (NA for Sun and Moon)
+    mass: relative to the Earth
+    radius: in km (generally the average of polar and equatorial)
+    day: length relative to Earth with Earth being 24 hours long
+    eccentricity: orbital eccentricity (ellipses only; parabolas and hyperpolas are not supported)
+    semi-major axis in AUs: required for all objects
+    semi-major axis in KM: NA for all but Sun and Moon
+    angular diameter in arseconds: NA for the Earth and Moon (generally the average is used here)
+    angular diameter in degrees: NA for all but Sun and Moon
+    VisualMagnitude: apparent visual Visual Magnitude at 1 AU; NA for Earth; for Moon, mV of full Moon from Earth
+    gravitational parameter: in km^3/s^2
+    inclination: in degrees
+    longitude at epoch: in degrees
+    longitude at perihelion: in degrees
+    longitude of ascending node: in degrees (NA for Sun and Earth since they're in the ecliptic plane)
+  </DataFormatDescrip>
+  <Epoch>2000.0</Epoch>
+  <JD>2451545.00</JD>
+  <Data>
+    <Sun>
+      <Inferior>NA</Inferior>
+      <Period>NA</Period>
+      <Mass>333000</Mass>
+      <Radius>695700</Radius>
+      <Day>25.449</Day>
+      <Eccentricity>0.016708</Eccentricity>
+      <SemiMajorAxisAU>1.0</SemiMajorAxisAU>
+      <SemiMajorAxisKM>1.495985E08</SemiMajorAxisKM>
+      <AngDiamArcSec>1919</AngDiamArcSec>
+      <AngDiamDeg>0.533128</AngDiamDeg>
+      <VisualMagnitude>-26.74</VisualMagnitude>
+      <GravParm>1.32712E11</GravParm>
+      <Inclination>0.00005</Inclination>
+      <LonAtEpoch>280.466069</LonAtEpoch>
+      <LonAtPeri>282.938346</LonAtPeri>
+      <LonAscNode>NA</LonAscNode>
+    </Sun>
+    <Moon>
+      <Inferior>NA</Inferior>
+      <Period>NA</Period>
+      <Mass>0.0123</Mass>
+      <Radius>1738.1</Radius>
+      <Day>27.322</Day>
+      <Eccentricity>0.0549</Eccentricity>
+      <SemiMajorAxisAU>0.002570</SemiMajorAxisAU>
+      <SemiMajorAxisKM>384400</SemiMajorAxisKM>
+      <AngDiamArcSec>NA</AngDiamArcSec>
+      <AngDiamDeg>0.5181</AngDiamDeg>
+      <VisualMagnitude>-12.74</VisualMagnitude>
+      <GravParm>4900</GravParm>
+      <Inclination>5.1453964</Inclination>
+      <LonAtEpoch>218.316433</LonAtEpoch>
+      <LonAtPeri>83.353451</LonAtPeri>
+      <LonAscNode>125.044522</LonAscNode>
+    </Moon>
+    <Earth>
+      <Inferior>NA</Inferior>
+      <Period>1.0000174</Period>
+      <Mass>1.0</Mass>
+      <Radius>6378.14</Radius>
+      <Day>1.0</Day>
+      <Eccentricity>0.01671123</Eccentricity>
+      <SemiMajorAxisAU>1.00000261</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>NA</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>NA</VisualMagnitude>
+      <GravParm>398600</GravParm>
+      <Inclination>-0.00001531</Inclination>
+      <LonAtEpoch>100.46457166</LonAtEpoch>
+      <LonAtPeri>102.93768193</LonAtPeri>
+      <LonAscNode>0</LonAscNode>
+    </Earth>
+    <Mercury>
+      <Inferior>true</Inferior>
+      <Period>0.2408467</Period>
+      <Mass>0.055274</Mass>
+      <Radius>2439.7</Radius>
+      <Day>58.6462</Day>
+      <Eccentricity>0.20563593</Eccentricity>
+      <SemiMajorAxisAU>0.38709927</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>6.74</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-0.42</VisualMagnitude>
+      <GravParm>22032</GravParm>
+      <Inclination>7.00497902</Inclination>
+      <LonAtEpoch>252.25032350</LonAtEpoch>
+      <LonAtPeri>77.45779628</LonAtPeri>
+      <LonAscNode>48.33076593</LonAscNode>
+    </Mercury>
+    <Venus>
+      <Inferior>true</Inferior>
+      <Period>0.61519726</Period>
+      <Mass>0.814998</Mass>
+      <Radius>6051.8</Radius>
+      <Day>243.018</Day>
+      <Eccentricity>0.00677672</Eccentricity>
+      <SemiMajorAxisAU>0.72333566</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>16.92</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-4.40</VisualMagnitude>
+      <GravParm>324860</GravParm>
+      <Inclination>3.39467605</Inclination>
+      <LonAtEpoch>181.97909950</LonAtEpoch>
+      <LonAtPeri>131.60246718</LonAtPeri>
+      <LonAscNode>76.67984255</LonAscNode>
+    </Venus>
+    <Mars>
+      <Inferior>false</Inferior>
+      <Period>1.8808476</Period>
+      <Mass>0.107447</Mass>
+      <Radius>3389.5</Radius>
+      <Day>1.02595676</Day>
+      <Eccentricity>0.09339410</Eccentricity>
+      <SemiMajorAxisAU>1.52371034</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>9.36</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-1.52</VisualMagnitude>
+      <GravParm>42828</GravParm>
+      <Inclination>1.84969142</Inclination>
+      <LonAtEpoch>-4.55343205</LonAtEpoch>
+      <LonAtPeri>-23.94362959</LonAtPeri>
+      <LonAscNode>49.55953891</LonAscNode>
+    </Mars>
+    <Jupiter>
+      <Inferior>false</Inferior>
+      <Period>11.862615</Period>
+      <Mass>317.828133</Mass>
+      <Radius>69911</Radius>
+      <Day>0.41354</Day>
+      <Eccentricity>0.0483927</Eccentricity>
+      <SemiMajorAxisAU>5.20288700</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>196.74</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-9.40</VisualMagnitude>
+      <GravParm>126687000</GravParm>
+      <Inclination>1.30439695</Inclination>
+      <LonAtEpoch>34.39644051</LonAtEpoch>
+      <LonAtPeri>14.72847983</LonAtPeri>
+      <LonAscNode>100.47390909</LonAscNode>
+    </Jupiter>
+    <Saturn>
+      <Inferior>false</Inferior>
+      <Period>29.447498</Period>
+      <Mass>95.160904</Mass>
+      <Radius>58232</Radius>
+      <Day>0.44401</Day>
+      <Eccentricity>0.05386179</Eccentricity>
+      <SemiMajorAxisAU>9.53667594</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>165.60</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-8.88</VisualMagnitude>
+      <GravParm>37931000</GravParm>
+      <Inclination>2.48599187</Inclination>
+      <LonAtEpoch>49.95424423</LonAtEpoch>
+      <LonAtPeri>92.59887831</LonAtPeri>
+      <LonAscNode>113.66242448</LonAscNode>
+    </Saturn>
+    <Uranus>
+      <Inferior>false</Inferior>
+      <Period>84.016846</Period>
+      <Mass>14.535757</Mass>
+      <Radius>25362</Radius>
+      <Day>0.71833</Day>
+      <Eccentricity>0.04725744</Eccentricity>
+      <SemiMajorAxisAU>19.18916464</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>65.80</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-7.19</VisualMagnitude>
+      <GravParm>5794000</GravParm>
+      <Inclination>0.77263783</Inclination>
+      <LonAtEpoch>313.23810451</LonAtEpoch>
+      <LonAtPeri>170.95427630</LonAtPeri>
+      <LonAscNode>74.01692503</LonAscNode>
+    </Uranus>
+    <Neptune>
+      <Inferior>false</Inferior>
+      <Period>164.79132</Period>
+      <Mass>17.147813</Mass>
+      <Radius>24622</Radius>
+      <Day>0.67125</Day>
+      <Eccentricity>0.00859048</Eccentricity>
+      <SemiMajorAxisAU>30.06992276</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>62.20</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-6.87</VisualMagnitude>
+      <GravParm>6835100</GravParm>
+      <Inclination>1.77004347 </Inclination>
+      <LonAtEpoch>-55.12002969</LonAtEpoch>
+      <LonAtPeri>44.96476227</LonAtPeri>
+      <LonAscNode>131.78422574</LonAscNode>
+    </Neptune>
+    <Pluto>
+      <Inferior>false</Inferior>
+      <Period>247.92065</Period>
+      <Mass>0.0022192</Mass>
+      <Radius>1151</Radius>
+      <Day>6.3872</Day>
+      <Eccentricity>0.24882730</Eccentricity>
+      <SemiMajorAxisAU>39.48211675</SemiMajorAxisAU>
+      <SemiMajorAxisKM>NA</SemiMajorAxisKM>
+      <AngDiamArcSec>8.20</AngDiamArcSec>
+      <AngDiamDeg>NA</AngDiamDeg>
+      <VisualMagnitude>-1.00</VisualMagnitude>
+      <GravParm>870</GravParm>
+      <Inclination>17.14001206</Inclination>
+      <LonAtEpoch>238.92903833</LonAtEpoch>
+      <LonAtPeri>224.06891629</LonAtPeri>
+      <LonAscNode>110.30393684</LonAscNode>
+    </Pluto>
+  </Data>
+</OrbitalElements>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LaunchSites>
+  <Revision>2.0</Revision>
+  <Date>2016-07-09 17:14:01</Date>
+  <Description>
+    This file contains the launch sites from the Table in Chapter 10.
+  </Description>
+  <Comments></Comments>
+  <DataFormatDescrip>
+    Use negative numbers for South latitudes, positive numbers for North latitudes
+  </DataFormatDescrip>
+  <Data>
+    <Site>
+      <Name>Pacific Missile Range, Hawaii</Name>
+      <Lat>22.02278</Lat>
+    </Site>
+    <Site>
+      <Name>Cape Canaveral, Florida</Name>
+      <Lat>28.46675</Lat>
+    </Site>
+    <Site>
+      <Name>Kennedy Space Center, Florida</Name>
+      <Lat>28.60820</Lat>
+    </Site>
+    <Site>
+      <Name>White Sands, New Mexico</Name>
+      <Lat>32.56460</Lat>
+    </Site>
+    <Site>
+      <Name>Vandenberg, California</Name>
+      <Lat>34.77204</Lat>
+    </Site>
+    <Site>
+      <Name>Wallops, Virginia</Name>
+      <Lat>37.84621</Lat>
+    </Site>
+    <Site>
+      <Name>Kodiak, Alaska</Name>
+      <Lat>57.43533</Lat>
+    </Site>
+  </Data>
+</LaunchSites>
